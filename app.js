@@ -20,7 +20,7 @@ mongoose.connect(
         process.env.MONGO_PASSWORD
     }@cluster0-ipcxw.gcp.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
 ).then(() => {
-    app.listen(3000)
+    app.listen(3001)
 }).catch(err => {
     console.log(err)
 })
