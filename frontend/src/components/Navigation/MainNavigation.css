@@ -10,9 +10,17 @@
     align-items: center
 }
 
+.main-navigation__logo {
+    margin-left: 1rem;
+}
+
 .main-navigation__logo h1 {
     margin: 0;
     font-size: 1.5rem;
+}
+
+.spacer {
+    flex: 1;
 }
 
 .main-navigation__items {
@@ -27,7 +35,7 @@
 }
 
 .main-navigation__items li {
-    margin: 0 1rem;
+    margin: 0 3rem 0 1rem;
 }
 
 .main-navigation__items a {
@@ -39,4 +47,20 @@
 .main-navigation__items a:active,
 .main-navigation__items a.active{
     color: orange;
+}
+
+@media (max-width: 768px) {
+    .main-navigation__items {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .toolbar__toggle-button {
+        display: none;
+    }
+
+    .main-navigation__logo {
+        margin-left: 0;
+    }
 }
