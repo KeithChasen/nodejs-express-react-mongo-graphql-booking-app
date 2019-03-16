@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const graphqlSchema = require('./graphql/schema/index')
 const graphqlResolvers = require('./graphql/resolvers/index')
 const isAuth = require('./middleware/is-auth')
+const config = require('./config')
 
 const app = express()
 
@@ -23,7 +24,7 @@ mongoose.connect(
         process.env.MONGO_PASSWORD
     }@cluster0-ipcxw.gcp.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`
 ).then(() => {
-    app.listen(3001)
+    app.listen(config.appPort)
 }).catch(err => {
     console.log(err)
 })
