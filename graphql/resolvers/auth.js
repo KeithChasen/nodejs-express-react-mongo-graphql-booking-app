@@ -4,10 +4,12 @@ const User = require('../../models/user')
 
 module.exports = {
     createUser: async args => {
+
         try {
-            const user = User.findOne({
+            const user = await User.findOne({
                 email: args.userInput.email
             })
+
             if (user) {
                 throw new Error('User already exists')
             }
